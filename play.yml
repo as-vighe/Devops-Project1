@@ -1,0 +1,13 @@
+- hosts: localhost
+  name: masterplay
+  become: true
+  tasks:
+   - name: running master script
+     script: master.sh
+- hosts: slaveservers
+  name: slaveplay
+  become: true
+  tasks:
+   - name: running slave script
+     script: slave.sh      
+
