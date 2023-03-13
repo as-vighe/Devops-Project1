@@ -4,10 +4,10 @@
   tasks:
    - name: running slave script
      ignore_errors: yes
-     shell: "ps -few | grep webapp |grep -v grep| awk '{print $2}'"
+     shell: "docker ps | grep webapp |grep -v grep| awk '{print $1}'"
      register: running_processes
  
    - name: Kill running processes
      ignore_errors: yes
-     shell: "/usr/bin/kill {{ item }}"
+     shell: "/usr/bin/docker stop {{ item }}"
      with_items: "{{ running_processes.stdout_lines }}" 
