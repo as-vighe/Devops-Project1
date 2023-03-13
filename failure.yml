@@ -1,0 +1,7 @@
+- hosts: slaveservers
+  name: slaveplay
+  become: true
+  tasks:
+   - name: running slave script
+     cmd: for image_id in `docker ps | grep "webapp" | awk "{print $1}"`; do docker stop $image_id; done
+     
