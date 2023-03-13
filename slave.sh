@@ -9,4 +9,4 @@ git clone https://github.com/as-vighe/Devops-Project1.git
 
 sudo docker rm -f webapp || true
 cd /home/ubuntu/Devops-Project1 && sudo docker build -t test .
-sudo docker run -it -d --name webapp -p 1998:8080 test
+sudo docker run -it -d --name webapp -p 80:80 test
