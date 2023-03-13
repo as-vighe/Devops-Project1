@@ -3,5 +3,11 @@
   become: true
   tasks:
    - name: running slave script
-     cmd: for image_id in `docker ps | grep "webapp" | awk "{print $1}"`; do docker stop $image_id; done
-     
+      ignore_errors: yes
+      shell: "ps -few | grep webapp |grep -v grep| awk '{print $2}'"
+      register: running_processes
+ 
+    - name: Kill running processes
+      ignore_errors: yes
+      shell: "/usr/bin/kill {{ item }}"
+      with_items: "{{ running_processes.stdout_lines }}" 
