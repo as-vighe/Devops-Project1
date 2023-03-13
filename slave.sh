@@ -6,6 +6,7 @@ sudo apt-get install openjdk-11-jdk -y
 sudo apt-get update && apt-get install git -y
 
 cd /home/ubuntu
+rm -rf Devops-Project1
 git clone https://github.com/as-vighe/Devops-Project1.git
 
 sudo docker rm -f webapp || true
