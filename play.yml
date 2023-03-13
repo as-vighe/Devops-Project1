@@ -9,5 +9,9 @@
   become: true
   tasks:
    - name: running slave script
-     script: slave123.sh      
-
+     script: slave123.sh         
+       
+   - name: copy docker file
+     copy:
+       src: "Dockerfile"
+       dest: "/home/ubuntu/Devops-Project1"
