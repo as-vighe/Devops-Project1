@@ -11,7 +11,4 @@
    - name: running slave script
      script: slave.sh         
        
-   - name: copy docker file
-     copy:
-       src: "Dockerfile"
-       dest: "/home/ubuntu/Devops-Project1"
+
