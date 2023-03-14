@@ -1,3 +1,3 @@
 [slaveservers]
-172.31.12.238 ansible_user=ubuntu
-172.31.7.10 ansible_user=ubuntu
+172.31.13.88 ansible_user=ubuntu
+172.31.13.64 ansible_user=ubuntu
