@@ -9,6 +9,6 @@
   become: true
   tasks:
    - name: running slave script
-     script: slave.sh         
+     script: slave123.sh         
        
 
